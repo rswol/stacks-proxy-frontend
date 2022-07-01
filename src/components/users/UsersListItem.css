@@ -1,0 +1,78 @@
+.users-list-item,
+.main-user-content,
+.user-controls {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main-user-content {
+  gap: 1rem;
+}
+
+.users-list-item {
+  position: relative;
+  background-color: rgb(var(--clr-white));
+  border-radius: 10px;
+  margin-block: 1rem;
+  padding: 1rem;
+  width: auto;
+  justify-content: space-between;
+}
+
+
+.user-icon {
+  width: clamp(60px, 8vw , 80px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(var(--clr-purple-0));
+  display: grid;
+  place-content: center;
+}
+
+.username {
+  font-size: 1.25rem;
+  color: rgb(var(--clr-black-50))
+}
+
+.token {
+  font-size: .85rem;
+  font-weight: 200;
+  color: rgba(var(--clr-black-0), .8);
+  word-break: break-all;
+}
+
+.user-controls {
+  position: absolute;
+  right: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+  height: calc(100% - 4rem);
+  border-radius: 15px;
+  transform: translateX(50vw);
+  transition: transform 250ms ease-out;
+  background-color: rgba(var(--clr-purple-0), .2);
+  backdrop-filter: blur(3px);
+}
+
+.delete-icon,
+.copy-icon {
+  cursor: pointer;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+}
+
+.copy-icon:hover {
+  background-color: rgb(var(--clr-purple-0));
+}
+
+.delete-icon:hover {
+  background-color: rgba(var(--clr-red), .1);
+}
+
+.users-list-item:hover .user-controls {
+  transform: translateX(0);
+}

@@ -1,0 +1,31 @@
+.message {
+  display: flex;
+  position: absolute;
+  transform: translateY(-100%) translateX(-50%);
+  left: 50%;
+  transition: transform 150ms ease-out;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(50px);
+  z-index: 100;
+  color: rgb(var(--clr-black-100));
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.message.show {
+  transform: translateY(50%) translateX(-50%);
+}
+
+.message.fail {
+  background-color: rgba(var(--clr-red), .3);
+  color: rgb(var(--clr-red));
+}
+
+.message.success {
+  background-color: rgba(var(--clr-green), .2);
+  color: rgb(var(--clr-green));
+}

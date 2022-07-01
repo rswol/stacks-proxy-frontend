@@ -1,0 +1,8 @@
+.users-list-container {
+  margin-block: 4rem;
+}
+
+.users-list-container > legend {
+  font-size: 1.25rem;
+  color: rgb(var(--clr-black-100))
+}
