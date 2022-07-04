@@ -19,7 +19,7 @@ export default function UsersListItem({ user }) {
       setToken(data)
     }
     getAndSetToken()
-  }, [])
+  }, [getToken, user])
 
   function copyToClipboard() {
     navigator.clipboard.writeText(token)
