@@ -6,7 +6,7 @@ import { useUsersData } from '../../context/UsersContext'
 import { useMessage } from '../../context/MessageContext'
 import DropDown from '../ui/Dropdown'
 import { AiOutlineUserAdd } from 'react-icons/ai'
-import { BsDot } from 'react-icons/bs'
+import { BsShieldShaded } from 'react-icons/bs'
 
 export default function Navbar() {
   const [newUserModal, setNewUserModal] = useState(false)
@@ -71,7 +71,7 @@ export default function Navbar() {
         </div>
         <div onClick={auth ? setAuthOff : setAuthOn}>
           <p>Auth state</p>
-          <BsDot 
+          <BsShieldShaded 
             size={24}
             color={auth ? "rgb(var(--clr-green))" : "rgb(var(--clr-red))"}
           />
